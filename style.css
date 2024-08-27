@@ -1,0 +1,174 @@
+/* Reseteo de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif; /* Aplicar la fuente Nunito */
+    background-color: #1a1a2e; /* Azul oscuro */
+    color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Aumentamos el ancho del contenedor al 90% */
+    max-width: 1600px; /* Aumentamos el máximo ancho del contenedor */
+    padding: 30px; /* Aumentamos el padding para más espacio interno */
+    background-color: #fff;
+    border-radius: 15px; /* Más borde redondeado para un diseño más suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
+    color: #343a40;
+    flex-direction: row; /* Para que los elementos estén uno al lado del otro en pantallas grandes */
+}
+
+.input-section {
+    width: 48%; /* Ajuste para que las secciones ocupen más espacio en la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+textarea {
+    width: 100%;
+    height: 200px; /* Aumentamos la altura del textarea */
+    padding: 15px; /* Aumentamos el padding interno */
+    border: 1px solid #ced4da;
+    border-radius: 10px; /* Más borde redondeado */
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.condicion {
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    gap: 15px; /* Más separación entre los botones */
+}
+
+/* Botón primario con fondo sólido */
+button.primary, button.secondary, #copiar {
+    padding: 15px 30px; /* Botones más grandes */
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+button.primary:hover, button.secondary:hover, #copiar:hover {
+    background-color: #007bff;
+    color: #fff; /* Cambia el color del texto al hacer hover */
+    transform: translateY(-2px); /* Pequeño movimiento hacia arriba */
+}
+
+.output-section {
+    width: 48%; /* Ajuste para que las secciones ocupen más espacio en la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 30px; /* Más padding interno */
+    border-radius: 10px; /* Más borde redondeado */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
+}
+
+#niño {
+    width: 70%; /* Ajustamos el tamaño de la imagen */
+    max-width: 250px; /* Aumentamos el máximo ancho de la imagen */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 26px; /* Aumentamos el tamaño de la fuente */
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    color: #495057;
+}
+
+/* Responsividad para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #niño {
+        display: none; /* Ocultar la imagen en tabletas */
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .botones {
+        flex-direction: column; /* Alineación vertical en tabletas */
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    #niño {
+        display: none; /* Ocultar la imagen en móviles */
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .botones {
+        flex-direction: column; /* Alineación vertical en móviles */
+        width: 100%;
+        gap: 10px;
+    }
+}
